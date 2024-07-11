@@ -9,7 +9,7 @@ I have added two directory trees to this repository:
 
 Each directory tree contains shell (bash) scripts, python code, fortran code (and executables), and NCAR Command Language (ncl)
 scripts that combine to produce and archive HDWI datafiles and images for the alaska/conus domain. The scripts/code called by each 
-shell script are included in the subdirectories where each script resides, with a from_<shell_script_name> naming convention. 
+shell script are included in the subdirectories where each script resides, with a from_<shell_script_name> naming convention. of the 
 On our stand-alone server, the alaska and conus scripts are called at different times and run to completion independently of each 
 other. The two runs are quite close to identical, with only a few differences related to data times and how precisely the 
 analyses are presented on the web page (link above).
@@ -34,3 +34,6 @@ Today, I finished updating all the scripts, html code, crontab, and install_sequ
 a freshly initiated Docker that follows the instructions therein.
 
 Next step is to test this for any lingering bugs, typos, or design flaws.
+
+11 July 2024 
+cloned/copied from the USFS Github repository for further development and optimization
