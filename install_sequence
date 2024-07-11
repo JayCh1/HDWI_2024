@@ -1,0 +1,93 @@
+Here is the sequence of steps that are needed to prepare a clean docker to run the HDWI scripts, html code, etc.:
+
+1) install netCDF (latest version)
+
+2) install python (latest version)
+  a) pip install numpy
+  b) pip install netCDF4 
+  c) pip install shapely cartopy --no-binary shapely --no-binary cartopy
+  d) pip install matplotlib
+  e) pip install scipy
+  f) pip install pyketree
+  g) pip install pandas
+  h) pip install metpy
+  i) pip install cmocean
+
+3) install ncl 
+  apt-get -y install ncl-ncarg
+
+5) install wgrib2
+  a) Download https://ftp.cpc.ncep.noaa.gov/wd51we/wgrib2/wgrib2.tgz
+  b) tar -xvf wgrib2.tgz && cd grib2 && make && make lib && cp wgrib2/wgrib2 /usr/local/bin/
+  
+6) apt-get install imagemagick
+
+7) create the following subdirectories under /home/hdw
+  /home/hdw/HDW_ARCHplots
+  /home/hdw/HDW_ARCHplots_AK
+  /home/hdw/HDW_GEFSplots
+  /home/hdw/HDW_GEFSplots/pastCONUSPerc
+  /home/hdw/HDW_GEFSplots_AK   
+  /home/hdw/HDW_GEFSplots_AK/pastAKPerc
+  /home/hdw/HDW_GEFSprobs
+  /home/hdw/HDW_GEFSprobs_AK
+  /home/hdw/HDW_climo
+  /home/hdw/HDW_climo_AK
+  /home/hdw/HDW_data
+  /home/hdw/HDW_data/pastANL
+  /home/hdw/HDW_data/pastFCST
+  /home/hdw/HDW_data_AK
+  /home/hdw/HDW_data_AK/pastANL
+  /home/hdw/HDW_data_AK/pastFCST
+  /home/hdw/HDW_scripts
+  /home/hdw/HDW_scripts_AK
+
+8) create the following subdirectories under /usr/share/nginx/html/images
+  /usr/share/nginx/html/images/CLIMO
+  /usr/share/nginx/html/images/CLIMO_AK
+  /usr/share/nginx/html/images/HDW_ARCH
+  /usr/share/nginx/html/images/HDW_ARCH_AK
+  /usr/share/nginx/html/images/HDW_GEFS
+  /usr/share/nginx/html/images/HDW_GEFS_AK
+  /usr/share/nginx/html/images/HDW_GEFSprobs
+  /usr/share/nginx/html/images/HDW_GEFSprobs_AK
+  
+9) Execute the following commands to populate /home/hdw and /usr/share/nginx/html/images subdirectories
+      with data files, images, and symbolic links
+      
+  /usr/local/bin/aws s3 cp s3://hdwi-nonprod-datastorage/HDW_ARCHplots/ /home/hdw/HDW_ARCHplots/ --recursive --region us-gov-west-1
+  /usr/local/bin/aws s3 cp s3://hdwi-nonprod-datastorage/HDW_GEFSplots/ /home/hdw/HDW_GEFSplots/ --recursive --region us-gov-west-1
+  /usr/local/bin/aws s3 cp s3://hdwi-nonprod-datastorage/HDW_GEFSprobs/ /home/hdw/HDW_GEFSprobs/ --recursive --region us-gov-west-1
+  
+  /usr/local/bin/aws s3 cp s3://hdwi-nonprod-datastorage/HDW_ARCHplots_AK/ /home/hdw/HDW_ARCHplots_AK/ --recursive --region us-gov-west-1
+  /usr/local/bin/aws s3 cp s3://hdwi-nonprod-datastorage/HDW_GEFSplots_AK/ /home/hdw/HDW_GEFSplots_AK/ --recursive --region us-gov-west-1
+  /usr/local/bin/aws s3 cp s3://hdwi-nonprod-datastorage/HDW_GEFSprobs_AK/ /home/hdw/HDW_GEFSprobs_AK/ --recursive --region us-gov-west-1
+  
+  /usr/local/bin/aws s3 cp s3://hdwi-nonprod-datastorage/CLIMO/ /usr/share/nginx/html/images/CLIMO/ --recursive --region us-gov-west-1
+  /usr/local/bin/aws s3 cp s3://hdwi-nonprod-datastorage/CLIMO_AK/ /usr/share/nginx/html/images/CLIMO_AK/ --recursive --region us-gov-west-1
+
+  /usr/local/bin/aws s3 cp s3://hdwi-nonprod-datastorage/HDW_scripts/hdwstatus.txt /home/hdw/HDW_scripts/hdwstatus.txt --region us-gov-west-1
+  /usr/local/bin/aws s3 cp s3://hdwi-nonprod-datastorage/HDW_scripts_AK/hdwstatus_AK.txt /home/hdw/HDW_scripts_AK/hdwstatus_AK.txt  --region us-gov-west-1
+
+  ln -sf /home/hdw/HDW_GEFSplots/ConusPerc.png /usr/share/nginx/html/images/
+  ln -sf /home/hdw/HDW_GEFSplots/ConusPercMedian.png /usr/share/nginx/html/images/
+  ln -sf /home/hdw/HDW_scripts/hdwstatus.txt /usr/share/nginx/html/images/
+  ln -sf /home/hdw/HDW_GEFSplots_AK/AKPerc.png /usr/share/nginx/html/images/
+  ln -sf /home/hdw/HDW_GEFSplots_AK/AKPercMedian.png /usr/share/nginx/html/images/
+  ln -sf /home/hdw/HDW_scripts_AK/hdwstatus_AK.txt /usr/share/nginx/html/images/
+  
+  ln -sf /home/hdw/HDW_GEFSplots/*.png /usr/share/nginx/html/images/HDW_GEFS/
+  ln -sf /home/hdw/HDW_GEFSprobs/*.png /usr/share/nginx/html/images/HDW_GEFSprobs/  
+  ln -sf /home/hdw/HDW_ARCHplots/*.png /usr/share/nginx/html/images/HDW_ARCH/
+  ln -sf /home/hdw/HDW_GEFSplots_AK/*.png /usr/share/nginx/html/images/HDW_GEFS_AK/
+  ln -sf /home/hdw/HDW_GEFSprobs_AK/*.png /usr/share/nginx/html/images/HDW_GEFSprobs_AK/  
+  ln -sf /home/hdw/HDW_ARCHplots_AK/*.png /usr/share/nginx/html/images/HDW_ARCH_AK/
+  
+10) Copy the contents of the home_hdw folder on this repository into /home/hdw/ on the Docker. This will add code and 
+small files to the /home/hdw/HDW_scripts and /home/hdw_HDW_scripts_AK subdirectories
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+Items still to be worked out:
+
+bug testing for fresh Docker installation

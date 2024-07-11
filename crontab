@@ -1,0 +1,2 @@
+0 5 * * * /home/hdw/HDW_scripts/HDW_GEFS_wrapper.sh > /home/hdw/cron_hdw.log 2>&1
+0 10 * * * /home/hdw/HDW_scripts_AK/HDW_GEFS_wrapper_AK.sh > /home/hdw/cron_hdw_AK.log 2>&1
