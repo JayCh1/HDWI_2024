@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>HDWI - Alaska</title>
+<meta name="keywords" content="HDW Hot Dry Windy Index Fire Weather" />
+<meta name="description" content="HDW Climatology and Forecasts" />
+<link rel="shortcut icon" href="images/HDW_favicon.ico">
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Akronim">
+
+<script type="text/javascript">
+function clickbutton()
+ {
+ 	mod1 = document.f1.mod.options[document.f1.mod.selectedIndex].value ;
+	lat1 = document.f1.lat.options[document.f1.lat.selectedIndex].value ;
+	lon1 = document.f1.lon.options[document.f1.lon.selectedIndex].value ;
+	outvar = "images/"+ mod1 + "_AK/" + mod1 + "_" + lat1 + "_" + lon1 + ".png";
+	window.open(outvar) ;
+ }
+</script>
+</head>
+
+<body>
+<div id="page" class="container">
+	<div id="header">
+		<div id="logo">
+      <img src="images/HDWILogo.png" alt="" class="image-almostfull" />
+		</div>
+		<div id="menu">
+			<ul>
+        <li><a href="index.html" title="">Home</a></li>
+        <li><a href="probs.html" title="">HDWI Probabilities</a></li>
+        <li class="current_page_item"><a href="alaska.html" title="">HDWI for Alaska</a></li>
+        <li><a href="abouthdw.html" title="">About HDWI</a></li>
+        <li><a href="case.html" title="">HDWI Case Studies</a></li>
+				<li><a href="contact.html" title="">Contact Us</a></li>
+			</ul>
+      <img src="images/high_res_shield.gif" alt="" class="image-almostfull" />
+      <br>
+      <img src="images/SCSU_StC.png" alt="" class="image-almostfull" />
+      <br>
+      <img src="images/MSU_Wordmark.png" alt="" class="image-almostfull" />
+    </div>
+	</div>
+	<div id="main">
+		<div id="welcome" class="center">
+      <div class="title">
+      	<h1>The Hot-Dry-Windy Index (HDWI) &#8211; Alaska Version</h1>
+				<span class="byline">Real-time Product Suite</span>
+			</div>
+      <p><b>HDWI-Alaska Status: <hdwstatus>
+      </hdwstatus></b></p>
+      <hr>
+      <h3>HDWI Forecasts, 30-year CFSR Climatology, and 30-day GEFS analysis archive available through the dropdowns here:</h3>
+			<p>
+				<form name="f1">
+					Model Type: <select name="mod"><option value="HDW_GEFS">GEFS Analysis+Forecast</option><option value="CLIMO">CFSR 30-yr Climatology</option><option value="HDW_ARCH">GEFS 30-day Analysis</option></select>
+					&nbsp; &nbsp;
+					Latitude: <select name="lat"><option value="52.0">52.0</option><option value="52.5">52.5</option><option value="53.0">53.0</option><option value="53.5">53.5</option><option value="54.0">54.0</option><option value="54.5">54.5</option><option value="55.0">55.0</option><option value="55.5">55.5</option><option value="56.0">56.0</option><option value="56.5">56.5</option><option value="57.0">57.0</option><option value="57.5">57.5</option><option value="58.0">58.0</option><option value="58.5">58.5</option><option value="59.0">59.0</option><option value="59.5">59.5</option><option value="60.0">60.0</option><option value="60.5">60.5</option><option value="61.0">61.0</option><option value="61.5">61.5</option><option value="62.0">62.0</option><option value="62.5">62.5</option><option value="63.0">63.0</option><option value="63.5">63.5</option><option value="64.0">64.0</option><option value="64.5">64.5</option><option value="65.0">65.0</option><option value="65.5">65.5</option><option value="66.0">66.0</option><option value="66.5">66.5</option><option value="67.0">67.0</option><option value="67.5">67.5</option><option value="68.0">68.0</option><option value="68.5">68.5</option><option value="69.0">69.0</option><option value="69.5">69.5</option><option value="70.0">70.0</option><option value="70.5">70.5</option><option value="71.0">71.0</option><option value="71.5">71.5</option><option value="72.0">72.0</option></select>
+					&nbsp; &nbsp;
+					Longitude: <select name="lon"><option value="-170.0">-170.0</option><option value="-169.5">-169.5</option><option value="-169.0">-169.0</option><option value="-168.5">-168.5</option><option value="-168.0">-168.0</option><option value="-167.5">-167.5</option><option value="-167.0">-167.0</option><option value="-166.5">-166.5</option><option value="-166.0">-166.0</option><option value="-165.5">-165.5</option><option value="-165.0">-165.0</option><option value="-164.5">-164.5</option><option value="-164.0">-164.0</option><option value="-163.5">-163.5</option><option value="-163.0">-163.0</option><option value="-162.5">-162.5</option><option value="-162.0">-162.0</option><option value="-161.5">-161.5</option><option value="-161.0">-161.0</option><option value="-160.5">-160.5</option><option value="-160.0">-160.0</option><option value="-159.5">-159.5</option><option value="-159.0">-159.0</option><option value="-158.5">-158.5</option><option value="-158.0">-158.0</option><option value="-157.5">-157.5</option><option value="-157.0">-157.0</option><option value="-156.5">-156.5</option><option value="-156.0">-156.0</option><option value="-155.5">-155.5</option><option value="-155.0">-155.0</option><option value="-154.5">-154.5</option><option value="-154.0">-154.0</option><option value="-153.5">-153.5</option><option value="-153.0">-153.0</option><option value="-152.5">-152.5</option><option value="-152.0">-152.0</option><option value="-151.5">-151.5</option><option value="-151.0">-151.0</option><option value="-150.5">-150.5</option><option value="-150.0">-150.0</option><option value="-149.5">-149.5</option><option value="-149.0">-149.0</option><option value="-148.5">-148.5</option><option value="-148.0">-148.0</option><option value="-147.5">-147.5</option><option value="-147.0">-147.0</option><option value="-146.5">-146.5</option><option value="-146.0">-146.0</option><option value="-145.5">-145.5</option><option value="-145.0">-145.0</option><option value="-144.5">-144.5</option><option value="-144.0">-144.0</option><option value="-143.5">-143.5</option><option value="-143.0">-143.0</option><option value="-142.5">-142.5</option><option value="-142.0">-142.0</option><option value="-141.5">-141.5</option><option value="-141.0">-141.0</option><option value="-140.5">-140.5</option><option value="-140.0">-140.0</option><option value="-139.5">-139.5</option><option value="-139.0">-139.0</option><option value="-138.5">-138.5</option><option value="-138.0">-138.0</option><option value="-137.5">-137.5</option><option value="-137.0">-137.0</option><option value="-136.5">-136.5</option><option value="-136.0">-136.0</option><option value="-135.5">-135.5</option><option value="-135.0">-135.0</option><option value="-134.5">-134.5</option><option value="-134.0">-134.0</option><option value="-133.5">-133.5</option><option value="-133.0">-133.0</option><option value="-132.5">-132.5</option><option value="-132.0">-132.0</option><option value="-131.5">-131.5</option><option value="-131.0">-131.0</option><option value="-130.5">-130.5</option><option value="-130.0">-130.0</option></select>
+					</select>
+					&nbsp; &nbsp;
+					<input type="button" name="go" value="Go!" onClick=clickbutton()>
+				</form>
+			</p>
+      <hr>
+      <h3>HDWI Forecasts also available through the clickable map here:</h3>
+      <br>
+      <div class="tab">
+        <button class="tablinks active" onclick="openPlot(event, 'MaxHDWI'); contentContainerAK.style.backgroundImage = 'url(images/AKPerc.png)'"><h3>Maximum HDWI</h3></button>
+        <button class="tablinks" onclick="openPlot(event, 'MedHDWI'); contentContainerAK.style.backgroundImage = 'url(images/AKPercMedian.png)'"><h3>Median HDWI</h3></button>
+      </div>
+
+      <div id="contentContainerAK">
+
+        <!-- Tab content -->
+        <div id="MaxHDWI" class="tabcontent">
+        </div>
+
+        <div id="MedHDWI" class="tabcontent">
+        </div>
+
+      <script type="text/javascript">
+      function round(value, step) {
+          step || (step = 1.0);
+          var inv = 1.0 / step;
+          return Math.round(value * inv) / inv * 1.0;
+      }
+
+      var container = document.querySelector("#contentContainerAK");
+
+      container.addEventListener("click", function(event) {
+       var xPosition = event.clientX - container.getBoundingClientRect().left;
+       var yPosition = event.clientY - container.getBoundingClientRect().top;
+       // in case of a wide border, the boarder-width needs to be considered in the formula above
+       var xlon = round(-170.0+((xPosition-52.0)*(40.0/836.0)),0.5);
+       var ylat = round(72.0-((yPosition-96.0)*(20.0/910.0)),0.5);
+       if ( xlon >= -170.0 && xlon <= -130.0 && ylat >= 52.0 && ylat <= 72.0 )
+        {
+         outvarmap = "images/HDW_GEFS_AK/HDW_GEFS_" + ylat.toFixed(1) + "_" + xlon.toFixed(1) + ".png";
+         window.open(outvarmap) ;
+        }
+
+       }
+     );
+     function openPlot(evt, plotName) {
+       // Declare all variables
+       var i, tabcontent, tablinks;
+
+       // Get all elements with class="tabcontent" and hide them
+       tabcontent = document.getElementsByClassName("tabcontent");
+       for (i = 0; i < tabcontent.length; i++) {
+         tabcontent[i].style.display = "none";
+       }
+
+       // Get all elements with class="tablinks" and remove the class "active"
+       tablinks = document.getElementsByClassName("tablinks");
+       for (i = 0; i < tablinks.length; i++) {
+         tablinks[i].className = tablinks[i].className.replace(" active", "");
+       }
+
+       // Show the current tab, and add an "active" class to the button that opened the tab
+       document.getElementById(plotName).style.display = "block";
+       evt.currentTarget.className += " active";
+     }
+      </script>
+
+    </div>
+
+      <hr>
+      <h3>HDWI Probabilities for Alaska:</h3>
+      <br>
+      <table layout="automatic" border="1">
+  			<tr>
+  				<td align="center"> </td>
+  				<td align="center"><b>75th Percentile</b></td>
+  				<td align="center"><b>90th Percentile</b></td>
+  				<td align="center"><b>95th Percentile</b></td>
+  			</tr>
+  			<tr>
+  				<td align="center" style="white-space:nowrap"><b>Day 0</b></td>
+  				<td><a href="images/HDW_GEFSprobs_AK/Day0Perc75_AK.png"><img width="100%" src="images/HDW_GEFSprobs_AK/Day0Perc75_AK.png"></a></td>
+  				<td><a href="images/HDW_GEFSprobs_AK/Day0Perc90_AK.png"><img width="100%" src="images/HDW_GEFSprobs_AK/Day0Perc90_AK.png"></a></td>
+  				<td><a href="images/HDW_GEFSprobs_AK/Day0Perc95_AK.png"><img width="100%" src="images/HDW_GEFSprobs_AK/Day0Perc95_AK.png"></a></td>
+  			</tr>
+  			<tr>
+  				<td align="center" style="white-space:nowrap"><b>Day +1</b></td>
+  				<td><a href="images/HDW_GEFSprobs_AK/Day1Perc75_AK.png"><img width="100%" src="images/HDW_GEFSprobs_AK/Day1Perc75_AK.png"></a></td>
+  				<td><a href="images/HDW_GEFSprobs_AK/Day1Perc90_AK.png"><img width="100%" src="images/HDW_GEFSprobs_AK/Day1Perc90_AK.png"></a></td>
+  				<td><a href="images/HDW_GEFSprobs_AK/Day1Perc95_AK.png"><img width="100%" src="images/HDW_GEFSprobs_AK/Day1Perc95_AK.png"></a></td>
+  			</tr>
+  			<tr>
+  				<td align="center" style="white-space:nowrap"><b>Day +2</b></td>
+  				<td><a href="images/HDW_GEFSprobs_AK/Day2Perc75_AK.png"><img width="100%" src="images/HDW_GEFSprobs_AK/Day2Perc75_AK.png"></a></td>
+  				<td><a href="images/HDW_GEFSprobs_AK/Day2Perc90_AK.png"><img width="100%" src="images/HDW_GEFSprobs_AK/Day2Perc90_AK.png"></a></td>
+  				<td><a href="images/HDW_GEFSprobs_AK/Day2Perc95_AK.png"><img width="100%" src="images/HDW_GEFSprobs_AK/Day2Perc95_AK.png"></a></td>
+  			</tr>
+  			<tr>
+  				<td align="center" style="white-space:nowrap"><b>Day +3</b></td>
+  				<td><a href="images/HDW_GEFSprobs_AK/Day3Perc75_AK.png"><img width="100%" src="images/HDW_GEFSprobs_AK/Day3Perc75_AK.png"></a></td>
+  				<td><a href="images/HDW_GEFSprobs_AK/Day3Perc90_AK.png"><img width="100%" src="images/HDW_GEFSprobs_AK/Day3Perc90_AK.png"></a></td>
+  				<td><a href="images/HDW_GEFSprobs_AK/Day3Perc95_AK.png"><img width="100%" src="images/HDW_GEFSprobs_AK/Day3Perc95_AK.png"></a></td>
+  			</tr>
+  			<tr>
+  				<td align="center" style="white-space:nowrap"><b>Day +4</b></td>
+  				<td><a href="images/HDW_GEFSprobs_AK/Day4Perc75_AK.png"><img width="100%" src="images/HDW_GEFSprobs_AK/Day4Perc75_AK.png"></a></td>
+  				<td><a href="images/HDW_GEFSprobs_AK/Day4Perc90_AK.png"><img width="100%" src="images/HDW_GEFSprobs_AK/Day4Perc90_AK.png"></a></td>
+  				<td><a href="images/HDW_GEFSprobs_AK/Day4Perc95_AK.png"><img width="100%" src="images/HDW_GEFSprobs_AK/Day4Perc95_AK.png"></a></td>
+  			</tr>
+  			<tr>
+  				<td align="center"style="white-space:nowrap"><b>Day +5</b></td>
+  				<td><a href="images/HDW_GEFSprobs_AK/Day5Perc75_AK.png"><img width="100%" src="images/HDW_GEFSprobs_AK/Day5Perc75_AK.png"></a></td>
+  				<td><a href="images/HDW_GEFSprobs_AK/Day5Perc90_AK.png"><img width="100%" src="images/HDW_GEFSprobs_AK/Day5Perc90_AK.png"></a></td>
+  				<td><a href="images/HDW_GEFSprobs_AK/Day5Perc95_AK.png"><img width="100%" src="images/HDW_GEFSprobs_AK/Day5Perc95_AK.png"></a></td>
+  			</tr>
+  			<tr>
+  				<td align="center" style="white-space:nowrap"><b>Day +6</b></td>
+  				<td><a href="images/HDW_GEFSprobs_AK/Day6Perc75_AK.png"><img width="100%" src="images/HDW_GEFSprobs_AK/Day6Perc75_AK.png"></a></td>
+  				<td><a href="images/HDW_GEFSprobs_AK/Day6Perc90_AK.png"><img width="100%" src="images/HDW_GEFSprobs_AK/Day6Perc90_AK.png"></a></td>
+  				<td><a href="images/HDW_GEFSprobs_AK/Day6Perc95_AK.png"><img width="100%" src="images/HDW_GEFSprobs_AK/Day6Perc95_AK.png"></a></td>
+  			</tr>
+  		</table>
+      <br>
+      <h3>How to use this page:</h3>
+      <p>This page is especially developed for users in Alaska.  Because HDWI is designed to work during daylight hours, the Alaska CFSR climatology uses the maximum HDWI from 1800, 0000, and 0600 UTC for a given day, while the GEFS forecasts use 1800, 2100, 0000, 0300, 0600, and 0900 GEFS output.  All other functionality should be the same as the main HDWI page.</p>
+      <p>As noted elsewhere, all of the products on this website are still in active development and should not be considered operational. We make every attempt to keep this site updated, but outages may happen. Use these products at your own risk.</p>
+    </div>
+		<div id="copyright">
+			<span>&copy; 2022. All rights reserved.</span>
+		</div>
+	</div>
+</div>
+</body>
+
+<script type="text/javascript">
+  var myHDW = document.querySelector('hdwstatus');
+  fetch('images/hdwstatus_AK.txt')
+  .then(function(response) { return response.text() })
+  .then(function(text) {
+    console.log(text);
+    myHDW.innerHTML = text ;
+  });
+</script>
+
+</html>

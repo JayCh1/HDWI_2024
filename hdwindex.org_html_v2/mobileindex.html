@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>HDW - Mobile</title>
+<meta name="keywords" content="HDW Hot Dry Windy Index Fire Weather" />
+<meta name="description" content="HDW Climatology and Forecasts" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="shortcut icon" href="images/HDW_favicon.ico">
+<link href="mobile.css" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Akronim">
+
+<script type="text/javascript">
+function clickbutton()
+ {
+ 	mod1 = document.f1.mod.options[document.f1.mod.selectedIndex].value ;
+	lat1 = document.f1.lat.options[document.f1.lat.selectedIndex].value ;
+	lon1 = document.f1.lon.options[document.f1.lon.selectedIndex].value ;
+	outvar = "images/"+ mod1 + "/" + mod1 + "_" + lat1 + "_" + lon1 + ".png";
+	window.open(outvar) ;
+ }
+</script>
+</head>
+
+<body>
+<div id="page" class="container">
+	<div id="header" class="center">
+		<h1><a href="index.html">HDW</a></h1>
+		<span>Mobile Forecast</span><br>
+    <span>Real-time Product Suite</span>
+  </div>
+	<div id="main" class="center">
+    <p><b>HDW Status: <hdwstatus>
+    </hdwstatus></b></p>
+    <h3>Select HDW Forecast or Climatology parameters:</h3>
+		<p>
+			<form name="f1">
+				Model Type: <select name="mod"><option value="HDW_GEFS">GEFS Analysis+Forecast</option><option value="CLIMO">CFSR 30-yr Climatology</option></select>
+        <br>
+        <br>
+        Latitude: <select name="lat"><option value="20.0">20.0</option><option value="20.5">20.5</option><option value="21.0">21.0</option><option value="21.5">21.5</option><option value="22.0">22.0</option><option value="22.5">22.5</option><option value="23.0">23.0</option><option value="23.5">23.5</option><option value="24.0">24.0</option><option value="24.5">24.5</option><option value="25.0">25.0</option><option value="25.5">25.5</option><option value="26.0">26.0</option><option value="26.5">26.5</option><option value="27.0">27.0</option><option value="27.5">27.5</option><option value="28.0">28.0</option><option value="28.5">28.5</option><option value="29.0">29.0</option><option value="29.5">29.5</option><option value="30.0">30.0</option><option value="30.5">30.5</option><option value="31.0">31.0</option><option value="31.5">31.5</option><option value="32.0">32.0</option><option value="32.5">32.5</option><option value="33.0">33.0</option><option value="33.5">33.5</option><option value="34.0">34.0</option><option value="34.5">34.5</option><option value="35.0">35.0</option><option value="35.5">35.5</option><option value="36.0">36.0</option><option value="36.5">36.5</option><option value="37.0">37.0</option><option value="37.5">37.5</option><option value="38.0">38.0</option><option value="38.5">38.5</option><option value="39.0">39.0</option><option value="39.5">39.5</option><option value="40.0">40.0</option><option value="40.5">40.5</option><option value="41.0">41.0</option><option value="41.5">41.5</option><option value="42.0">42.0</option><option value="42.5">42.5</option><option value="43.0">43.0</option><option value="43.5">43.5</option><option value="44.0">44.0</option><option value="44.5">44.5</option><option value="45.0">45.0</option><option value="45.5">45.5</option><option value="46.0">46.0</option><option value="46.5">46.5</option><option value="47.0">47.0</option><option value="47.5">47.5</option><option value="48.0">48.0</option><option value="48.5">48.5</option><option value="49.0">49.0</option><option value="49.5">49.5</option><option value="50.0">50.0</option><option value="50.5">50.5</option><option value="51.0">51.0</option><option value="51.5">51.5</option><option value="52.0">52.0</option><option value="52.5">52.5</option><option value="53.0">53.0</option><option value="53.5">53.5</option><option value="54.0">54.0</option><option value="54.5">54.5</option><option value="55.0">55.0</option><option value="55.5">55.5</option><option value="56.0">56.0</option><option value="56.5">56.5</option><option value="57.0">57.0</option><option value="57.5">57.5</option><option value="58.0">58.0</option><option value="58.5">58.5</option><option value="59.0">59.0</option><option value="59.5">59.5</option><option value="60.0">60.0</option></select>
+        <br>
+        <br>
+				Longitude: <select name="lon"><option value="-130.0">-130.0</option><option value="-129.5">-129.5</option><option value="-129.0">-129.0</option><option value="-128.5">-128.5</option><option value="-128.0">-128.0</option><option value="-127.5">-127.5</option><option value="-127.0">-127.0</option><option value="-126.5">-126.5</option><option value="-126.0">-126.0</option><option value="-125.5">-125.5</option><option value="-125.0">-125.0</option><option value="-124.5">-124.5</option><option value="-124.0">-124.0</option><option value="-123.5">-123.5</option><option value="-123.0">-123.0</option><option value="-122.5">-122.5</option><option value="-122.0">-122.0</option><option value="-121.5">-121.5</option><option value="-121.0">-121.0</option><option value="-120.5">-120.5</option><option value="-120.0">-120.0</option><option value="-119.5">-119.5</option><option value="-119.0">-119.0</option><option value="-118.5">-118.5</option><option value="-118.0">-118.0</option><option value="-117.5">-117.5</option><option value="-117.0">-117.0</option><option value="-116.5">-116.5</option><option value="-116.0">-116.0</option><option value="-115.5">-115.5</option><option value="-115.0">-115.0</option><option value="-114.5">-114.5</option><option value="-114.0">-114.0</option><option value="-113.5">-113.5</option><option value="-113.0">-113.0</option><option value="-112.5">-112.5</option><option value="-112.0">-112.0</option><option value="-111.5">-111.5</option><option value="-111.0">-111.0</option><option value="-110.5">-110.5</option><option value="-110.0">-110.0</option><option value="-109.5">-109.5</option><option value="-109.0">-109.0</option><option value="-108.5">-108.5</option><option value="-108.0">-108.0</option><option value="-107.5">-107.5</option><option value="-107.0">-107.0</option><option value="-106.5">-106.5</option><option value="-106.0">-106.0</option><option value="-105.5">-105.5</option><option value="-105.0">-105.0</option><option value="-104.5">-104.5</option><option value="-104.0">-104.0</option><option value="-103.5">-103.5</option><option value="-103.0">-103.0</option><option value="-102.5">-102.5</option><option value="-102.0">-102.0</option><option value="-101.5">-101.5</option><option value="-101.0">-101.0</option><option value="-100.5">-100.5</option><option value="-100.0">-100.0</option><option value="-99.5">-99.5</option><option value="-99.0">-99.0</option><option value="-98.5">-98.5</option><option value="-98.0">-98.0</option><option value="-97.5">-97.5</option><option value="-97.0">-97.0</option><option value="-96.5">-96.5</option><option value="-96.0">-96.0</option><option value="-95.5">-95.5</option><option value="-95.0">-95.0</option><option value="-94.5">-94.5</option><option value="-94.0">-94.0</option><option value="-93.5">-93.5</option><option value="-93.0">-93.0</option><option value="-92.5">-92.5</option><option value="-92.0">-92.0</option><option value="-91.5">-91.5</option><option value="-91.0">-91.0</option><option value="-90.5">-90.5</option><option value="-90.0">-90.0</option><option value="-89.5">-89.5</option><option value="-89.0">-89.0</option><option value="-88.5">-88.5</option><option value="-88.0">-88.0</option><option value="-87.5">-87.5</option><option value="-87.0">-87.0</option><option value="-86.5">-86.5</option><option value="-86.0">-86.0</option><option value="-85.5">-85.5</option><option value="-85.0">-85.0</option><option value="-84.5">-84.5</option><option value="-84.0">-84.0</option><option value="-83.5">-83.5</option><option value="-83.0">-83.0</option><option value="-82.5">-82.5</option><option value="-82.0">-82.0</option><option value="-81.5">-81.5</option><option value="-81.0">-81.0</option><option value="-80.5">-80.5</option><option value="-80.0">-80.0</option><option value="-79.5">-79.5</option><option value="-79.0">-79.0</option><option value="-78.5">-78.5</option><option value="-78.0">-78.0</option><option value="-77.5">-77.5</option><option value="-77.0">-77.0</option><option value="-76.5">-76.5</option><option value="-76.0">-76.0</option><option value="-75.5">-75.5</option><option value="-75.0">-75.0</option><option value="-74.5">-74.5</option><option value="-74.0">-74.0</option><option value="-73.5">-73.5</option><option value="-73.0">-73.0</option><option value="-72.5">-72.5</option><option value="-72.0">-72.0</option><option value="-71.5">-71.5</option><option value="-71.0">-71.0</option><option value="-70.5">-70.5</option><option value="-70.0">-70.0</option><option value="-69.5">-69.5</option><option value="-69.0">-69.0</option><option value="-68.5">-68.5</option><option value="-68.0">-68.0</option><option value="-67.5">-67.5</option><option value="-67.0">-67.0</option><option value="-66.5">-66.5</option><option value="-66.0">-66.0</option><option value="-65.5">-65.5</option><option value="-65.0">-65.0</option><option value="-64.5">-64.5</option><option value="-64.0">-64.0</option><option value="-63.5">-63.5</option><option value="-63.0">-63.0</option><option value="-62.5">-62.5</option><option value="-62.0">-62.0</option><option value="-61.5">-61.5</option><option value="-61.0">-61.0</option><option value="-60.5">-60.5</option><option value="-60.0">-60.0</option></select>
+				</select>
+        <br>
+        <br>
+				<input type="button" name="go" value="Go!" onClick=clickbutton()>
+			</form>
+		</p>
+    <hr>
+    <p><a href="images/ConusPerc.png">Today's CONUS HDW image</a></p>
+    <p><a href="images/AKPerc.png">Today's Alaska HDW image</a></p>
+    <p><a href="https://hdwindex.fs2c.usda.gov">Full HDW Site</a></p>
+	</div>
+  <div id="copyright">
+	   <span>&copy; 2022. All rights reserved.</span>
+	</div>
+</div>
+</body>
+
+<script type="text/javascript">
+  var myHDW = document.querySelector('hdwstatus');
+  fetch('images/hdwstatus.txt')
+  .then(function(response) { return response.text() })
+  .then(function(text) {
+    console.log(text);
+    myHDW.innerHTML = text ;
+  });
+</script>
+
+</html>
