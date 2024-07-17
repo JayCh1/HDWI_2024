@@ -1,4 +1,23 @@
 # HDWI_USFS_cloud
+
+11 July 2024 
+
+cloned/copied from the USFS Github repository for further development and optimization (history on USFS github
+included below)
+
+17 July 2024
+a) created two branches for transition away from ncl to using shell script and ncgen
+  i) branch #1 will contribute to the production of history/climate files by computing HDWI for a single yyyymmddhh
+  ii) branch #2 will compute HDWI values for a single day using all times available for burn period for that day
+
+
+
+
+
+
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ USFS repo history) @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 Repository to transition http://hdwindex.org products to USFS-hosted cloud environment
 
 12 August 2022 Update:
@@ -16,7 +35,7 @@ analyses are presented on the web page (link above).
 
 16 August 2022
 
-I have added html code and css files that are used by hdwindex.org as the public-facing front end for our product.
+I have added html code and css files shell_ncgen_historythat are used by hdwindex.org as the public-facing front end for our product.
 
 28 August
 
@@ -35,6 +54,4 @@ a freshly initiated Docker that follows the instructions therein.
 
 Next step is to test this for any lingering bugs, typos, or design flaws.
 
-11 July 2024 
 
-cloned/copied from the USFS Github repository for further development and optimization
