@@ -6,8 +6,11 @@ cloned/copied from the USFS Github repository for further development and optimi
 included below)
 
 17 July 2024
+
 a) created two branches for transition away from ncl to using shell script and ncgen
+
   i) branch #1 will contribute to the production of history/climate files by computing HDWI for a single yyyymmddhh
+
   ii) branch #2 will compute HDWI values for a single day using all times available for burn period for that day
 
 
