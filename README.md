@@ -17,7 +17,7 @@ a) created two branches for transition away from ncl to using shell script and n
 
 
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ USFS repo history) @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@ USFS repo history) @@@@@@@@@@@@@@@@@@@@@@
 Repository to transition http://hdwindex.org products to USFS-hosted cloud environment
 
 12 August 2022 Update:
