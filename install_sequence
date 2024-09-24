@@ -26,28 +26,4 @@ make lib
 export PATH=/home/ubuntu/grib2/wgrib2:$PATH
 cd
 
-# create the following subdirectories under /home/ubuntu
-mkdir /home/ubuntu/HDW_ARCHplots
-mkdir /home/ubuntu/HDW_ARCHplots_AK
-mkdir /home/ubuntu/HDW_GEFSplots
-mkdir /home/ubuntu/HDW_GEFSplots/pastCONUSPerc
-mkdir /home/ubuntu/HDW_GEFSplots_AK   
-mkdir /home/ubuntu/HDW_GEFSplots_AK/pastAKPerc
-mkdir /home/ubuntu/HDW_GEFSprobs
-mkdir /home/ubuntu/HDW_GEFSprobs_AK
-mkdir /home/ubuntu/HDW_climo
-mkdir /home/ubuntu/HDW_climo_AK
-mkdir /home/ubuntu/HDW_data
-mkdir /home/ubuntu/HDW_data/pastANL
-mkdir /home/ubuntu/HDW_data/pastFCST
-mkdir /home/ubuntu/HDW_data_AK
-mkdir /home/ubuntu/HDW_data_AK/pastANL
-mkdir /home/ubuntu/HDW_data_AK/pastFCST
-mkdir /home/ubuntu/HDW_scripts
-mkdir /home/ubuntu/HDW_scripts_AK
-
-# Make sure script directories are executable
-chmod 755 -R /home/ubuntu/HDW_scripts
-chmod 755 -R /home/ubuntu/HDW_scripts_AK
-
 # Then, just run the scripts!
