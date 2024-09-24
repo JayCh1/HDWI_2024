@@ -112,15 +112,15 @@ perc_colors = ['w',cm.YlOrBr(0.20), cm.YlOrBr(0.40),cm.YlOrBr(0.60),cm.YlOrBr(.8
 
 def plot_CONUS():
     # Climate Data for Climatology
-    directory_climo = r'/home/hdw/HDW_climo/'
+    directory_climo = r'/home/ubuntu/HDW_climo/'
     filename_climo = r'CFSR_MaxDHDW_CLIMO.nc'
 
     # Forecast Data
-    directory_forecast  = r'/home/hdw/HDW_data/'
+    directory_forecast  = r'/home/ubuntu/HDW_data/'
     filename_forecast = r'GEFS_HDW_FCST.nc'
 
     # Location where figures will be saved
-    directory_fig = r'/home/hdw/HDW_GEFSplots/'
+    directory_fig = r'/home/ubuntu/HDW_GEFSplots/'
 
 
     # CLIMATOLOGY
@@ -134,7 +134,7 @@ def plot_CONUS():
 
     # FORECAST DATA
     ncfile_forecast = Dataset('%s%s' % (directory_forecast,filename_forecast), 'r')
-    HDWfcst = ncfile_forecast.variables['HDWFCST'][:] #days, mem, lat, lon
+    HDWfcst = ncfile_forecast.variables['HDWI'][:] #days, mem, lat, lon
     ncfile_forecast.close()
     
     # find current day and make percentiles grid
@@ -273,16 +273,16 @@ def plot_CONUS():
     
 def plot_AK():
     #directory_climo = r'climo_AK/'
-    directory_climo = r'/home/hdw/HDW_climo_AK/'
+    directory_climo = r'/home/ubuntu/HDW_climo_AK/'
     filename_climo = r'CFSR_MaxDHDW_CLIMO_AK.nc'
 
     # Forecast Data
     #directory_forecast = r'GEFS_fcst_AK/'
-    directory_forecast = r'/home/hdw/HDW_data_AK/'
+    directory_forecast = r'/home/ubuntu/HDW_data_AK/'
     filename_forecast = r'GEFS_HDW_FCST_AK.nc'
 
     # Location where figures will be saved
-    directory_fig = r'/home/hdw/HDW_GEFSplots_AK/'
+    directory_fig = r'/home/ubuntu/HDW_GEFSplots_AK/'
     #directory_fig = r'plots/'
 
 
@@ -297,7 +297,7 @@ def plot_AK():
 
     # FORECAST DATA
     ncfile_forecast = Dataset('%s%s' % (directory_forecast,filename_forecast), 'r')
-    HDWfcst = ncfile_forecast.variables['HDWFCST'][:] #days, mem, lat, lon
+    HDWfcst = ncfile_forecast.variables['HDWI'][:] #days, mem, lat, lon
     ncfile_forecast.close()
     
     # find current_day and make percentiles grid
@@ -356,7 +356,7 @@ def plot_AK():
     #    ax.spines[txt].set_linewidth(1.5)
     #    ax.spines[txt].set_zorder(32)
 
-    im = plt.imread('/home/hdw/HDW_scripts/HDWLogo_Light.png')
+    im = plt.imread('/home/ubuntu/HDW_scripts_AK/HDWLogo_Light.png')
     ax2 = fig.add_axes([0.14, 0.75, 0.1, 0.16], zorder=30)
     ax2.imshow(im)
     ax2.axis('off')
@@ -417,7 +417,7 @@ def plot_AK():
     #    ax.spines[txt].set_linewidth(1.5)
     #    ax.spines[txt].set_zorder(32)
 
-    im = plt.imread('/home/hdw/HDW_scripts/HDWLogo_Light.png')
+    im = plt.imread('/home/ubuntu/HDW_scripts_AK/HDWLogo_Light.png')
     ax2 = fig.add_axes([0.14, 0.75, 0.1, 0.16], zorder=30)
     ax2.imshow(im)
     ax2.axis('off')

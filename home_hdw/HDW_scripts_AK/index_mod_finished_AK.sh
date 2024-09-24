@@ -11,6 +11,10 @@ yyyy=`date +%Y`
 mm=`date +%m`
 dd=`date +%d`
 
-/usr/local/bin/aws s3 cp /home/hdw/HDW_GEFSplots_AK/AKPerc.png s3://hdwi-nonprod-datastorage/HDW_GEFSplots_AK/pastAKPerc/AKPerc${yyyy}${mm}${dd}.png
-/usr/bin/convert -resize 940 /home/hdw/HDW_GEFSplots_AK/AKPerc.png /home/hdw/HDW_GEFSplots_AK/AKPerc.png
-/usr/binconvert -resize 940 /home/hdw/HDW_GEFSplots_AK/AKPercMedian.png /home/hdw/HDW_GEFSplots_AK/AKPercMedian.png 
+/usr/local/bin/aws s3 cp /home/ubuntu/HDW_GEFSplots_AK/AKPerc.png s3://$DATA_BUCKET/HDW_GEFSplots_AK/pastAKPerc/AKPerc${yyyy}${mm}${dd}.png
+cp /home/ubuntu/HDW_GEFSplots_AK/AKPerc.png /home/ubuntu/HDW_GEFSplots_AK/pastAKPerc/AKPerc${yyyy}${mm}${dd}.png
+/usr/bin/convert -resize 940 /home/ubuntu/HDW_GEFSplots_AK/AKPerc.png /home/ubuntu/HDW_GEFSplots_AK/AKPerc.png
+/usr/bin/convert -resize 940 /home/ubuntu/HDW_GEFSplots_AK/AKPercMedian.png /home/ubuntu/HDW_GEFSplots_AK/AKPercMedian.png 
+/usr/local/bin/aws s3 cp /home/ubuntu/HDW_GEFSplots_AK/AKPerc.png s3://$DATA_BUCKET/HDW_GEFSplots_AK/AKPerc.png
+/usr/local/bin/aws s3 cp /home/ubuntu/HDW_GEFSplots_AK/AKPercMedian.png s3://$DATA_BUCKET/HDW_GEFSplots_AK/AKPercMedian.png
+

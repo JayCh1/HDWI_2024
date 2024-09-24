@@ -11,7 +11,10 @@ yyyy=`date +%Y`
 mm=`date +%m`
 dd=`date +%d`
 
-/usr/local/bin/aws s3 cp /home/hdw/HDW_GEFSplots/ConusPerc.png s3://hdwi-nonprod-datastorage/HDW_GEFSplots/pastConusPerc/ConusPerc${yyyy}${mm}${dd}.png
-/usr/bin/convert -resize 940 /home/hdw/HDW_GEFSplots/ConusPerc.png /home/hdw/HDW_GEFSplots/ConusPerc.png
-/usr/bin/convert -resize 940 /home/hdw/HDW_GEFSplots/ConusPercMedian.png /home/hdw/HDW_GEFSplots/ConusPercMedian.png
+/usr/local/bin/aws s3 cp /home/ubuntu/HDW_GEFSplots/ConusPerc.png s3://$DATA_BUCKET/HDW_GEFSplots/pastConusPerc/ConusPerc${yyyy}${mm}${dd}.png
+#cp /home/ubuntu/HDW_GEFSplots/ConusPerc.png /home/ubuntu/HDW_GEFSplots/pastConusPerc/ConusPerc${yyyy}${mm}${dd}.png
+/usr/bin/convert -resize 940 /home/ubuntu/HDW_GEFSplots/ConusPerc.png /home/ubuntu/HDW_GEFSplots/ConusPerc.png
+/usr/bin/convert -resize 940 /home/ubuntu/HDW_GEFSplots/ConusPercMedian.png /home/ubuntu/HDW_GEFSplots/ConusPercMedian.png
+/usr/local/bin/aws s3 cp /home/ubuntu/HDW_GEFSplots/ConusPerc.png s3://$DATA_BUCKET/HDW_GEFSplots/ConusPerc.png
+/usr/local/bin/aws s3 cp /home/ubuntu/HDW_GEFSplots/ConusPercMedian.png s3://$DATA_BUCKET/HDW_GEFSplots/ConusPercMedian.png
 

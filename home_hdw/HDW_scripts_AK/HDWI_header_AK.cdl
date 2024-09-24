@@ -1,0 +1,46 @@
+netcdf HDWI {  // begin the NetCDF file here...
+dimensions:
+	latitude = 41 ;
+	longitude = 81 ;
+
+variables:
+        double latitude(latitude) ;
+                latitude:units = "degrees_north" ;
+                latitude:long_name = "latitude" ;
+        double longitude(longitude) ;
+                longitude:units = "degrees_east" ;
+                longitude:long_name = "longitude" ;
+        float HDWI(latitude, longitude) ;
+                HDWI:units = "HDW" ;
+                HDWI:level = "nearsurface" ;
+                HDWI:long_name = "Hot-Dry-Windy Index" ;
+                HDWI:short_name = "HDW Index" ;
+                HDWI:_FillValue = -9999.f ;
+        float U(latitude, longitude) ;
+                U:units = "m/s" ;
+                U:level = "nearsurface" ;
+                U:long_name = "Maxumum Wind Speed" ;
+                U:short_name = "Umax" ;
+                U:_FillValue = -9999.f ;
+        float VPD(latitude, longitude) ;
+                VPD:units = "hPa" ;
+                VPD:level = "nearsurface" ;
+                VPD:long_name = "Maximum Vapor Pressure Deficit" ;
+                VPD:short_name = "VPDmax" ;
+                VPD:_FillValue = -9999.f ;
+
+data:
+ latitude = 52, 52.5, 53, 53.5, 54, 54.5, 55, 55.5, 56, 56.5, 57, 57.5, 58, 
+    58.5, 59, 59.5, 60, 60.5, 61, 61.5, 62, 62.5, 63, 63.5, 64, 64.5, 65, 
+    65.5, 66, 66.5, 67, 67.5, 68, 68.5, 69, 69.5, 70, 70.5, 71, 71.5, 72 ;
+
+ longitude = -170, -169.5, -169, -168.5, -168, -167.5, -167, -166.5, -166, 
+    -165.5, -165, -164.5, -164, -163.5, -163, -162.5, -162, -161.5, -161, 
+    -160.5, -160, -159.5, -159, -158.5, -158, -157.5, -157, -156.5, -156, 
+    -155.5, -155, -154.5, -154, -153.5, -153, -152.5, -152, -151.5, -151, 
+    -150.5, -150, -149.5, -149, -148.5, -148, -147.5, -147, -146.5, -146, 
+    -145.5, -145, -144.5, -144, -143.5, -143, -142.5, -142, -141.5, -141, 
+    -140.5, -140, -139.5, -139, -138.5, -138, -137.5, -137, -136.5, -136, 
+    -135.5, -135, -134.5, -134, -133.5, -133, -132.5, -132, -131.5, -131, 
+    -130.5, -130 ;
+

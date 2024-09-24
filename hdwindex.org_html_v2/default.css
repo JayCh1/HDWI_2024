@@ -145,7 +145,7 @@
  	width: 940px;
  	height: 806px;
  	overflow: hidden;
- 	background-image: url("images/ConusPerc.png");
+ 	background-image: url("HDW_GEFSplots/ConusPerc.png");
 	cursor: pointer;
   }
 
@@ -161,7 +161,7 @@
 	width: 940px;
 	height: 1120px;
 	overflow: hidden;
-	background-image: url("images/AKPerc.png");
+	background-image: url("HDW_GEFSplots_AK/AKPerc.png");
 	cursor: pointer;
  }
 

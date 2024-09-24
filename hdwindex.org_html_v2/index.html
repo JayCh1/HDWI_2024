@@ -14,34 +14,6 @@ Design Name : Privy
 <link href="default.css" rel="stylesheet" type="text/css" media="all" />
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Akronim" rel="stylesheet" type="text/css">
-	
-<script>
- (function(h,o,u,n,d) {
-  h=h[d]=h[d]||{q:[],onReady:function(c){h.q.push(c)}}
-  d=o.createElement(u);d.async=1;d.src=n
-  n=o.getElementsByTagName(u)[0];n.parentNode.insertBefore(d,n)
-  })(window,document,'script','https://www.datadoghq-browser-agent.com/datadog-rum-v5.js','DD_RUM')
-  window.DD_RUM.onReady(function() {
-  window.DD_RUM.init({
-     clientToken: 'pub02a82e092402d5b7b6d46e63425f3717',
-     applicationId: 'ca799005-d3a1-4107-a33b-f332ec547906',
-     site: 'ddog-gov.com',
-     service: 'hdwi',
-          application_team: 'HDWI',
-          test_type: 'RUM',
-          platform: 'AWS',
-          env: 'production',
-     // Specify a version number to identify the deployed version of your application in Datadog 
-     // version: '1.0.0', 
-     sessionSampleRate: 100,
-     sessionReplaySampleRate: 20,
-     trackUserInteractions: true,
-     trackResources: true,
-     trackLongTasks: true,
-     defaultPrivacyLevel: 'mask-user-input',
-     });
-  })
-</script>		
 
 <script type="text/javascript">
 function clickbutton()
@@ -49,7 +21,7 @@ function clickbutton()
  	mod1 = document.f1.mod.options[document.f1.mod.selectedIndex].value ;
 	lat1 = document.f1.lat.options[document.f1.lat.selectedIndex].value ;
 	lon1 = document.f1.lon.options[document.f1.lon.selectedIndex].value ;
-	outvar = "images/"+ mod1 + "/" + mod1 + "_" + lat1 + "_" + lon1 + ".png";
+	outvar = mod1 + "plots/" + mod1 + "_" + lat1 + "_" + lon1 + ".png";
 	window.open(outvar) ;
  }
 
@@ -106,8 +78,8 @@ function clickbutton()
       <h3>HDWI Forecasts also available through the clickable map here:</h3>
       <br>
       <div class="tab">
-        <button class="tablinks active" onclick="openPlot(event, 'MaxHDWI'); contentContainer.style.backgroundImage = 'url(images/ConusPerc.png)'"><h3>Maximum HDWI</h3></button>
-        <button class="tablinks" onclick="openPlot(event, 'MedHDWI'); contentContainer.style.backgroundImage = 'url(images/ConusPercMedian.png)'"><h3>Median HDWI</h3></button>
+        <button class="tablinks active" onclick="openPlot(event, 'MaxHDWI'); contentContainer.style.backgroundImage = 'url(HDW_GEFSplots/ConusPerc.png)'"><h3>Maximum HDWI</h3></button>
+        <button class="tablinks" onclick="openPlot(event, 'MedHDWI'); contentContainer.style.backgroundImage = 'url(HDW_GEFSplots/ConusPercMedian.png)'"><h3>Median HDWI</h3></button>
       </div>
 
       <div id="contentContainer">
@@ -136,7 +108,7 @@ function clickbutton()
        var ylat = round(60.0-((yPosition-74.0)*(40.0/635.0)),0.5);
        if ( xlon >= -130.0 && xlon <= -60.0 && ylat >= 20.0 && ylat <= 60.0 )
         {
-         outvarmap = "images/HDW_GEFS/HDW_GEFS_" + ylat.toFixed(1) + "_" + xlon.toFixed(1) + ".png";
+         outvarmap = "HDW_GEFSplots/HDW_GEFS_" + ylat.toFixed(1) + "_" + xlon.toFixed(1) + ".png";
          window.open(outvarmap) ;
         }
 
@@ -190,7 +162,7 @@ function clickbutton()
 
 <script type="text/javascript">
   var myHDW = document.querySelector('hdwstatus');
-  fetch('images/hdwstatus.txt')
+  fetch('hdwstatus.txt')
   .then(function(response) { return response.text() })
   .then(function(text) {
     console.log(text);

@@ -146,16 +146,16 @@ def plot_CONUS(lat_start, lat_end):
     
 
     # Past 10 Days Data
-    directory_past = r'/home/hdw/HDW_data/'
+    directory_past = r'/home/ubuntu/HDW_data/'
     #directory_past = r'GEFS_fcst/'
 
     # Climate Data for Climatology
-    directory_climo = r'/home/hdw/HDW_climo/'
+    directory_climo = r'/home/ubuntu/HDW_climo/'
     #directory_climo = r'climo/'
     filename_climo = r'CFSR_MaxDHDW_CLIMO.nc'
 
     # Location where figures will be saved
-    directory_fig = r'/home/hdw/HDW_ARCHplots/'
+    directory_fig = r'/home/ubuntu/HDW_ARCHplots/'
 
     ######
     ###### Everyhing below is what should be copied into new scripts
@@ -182,7 +182,7 @@ def plot_CONUS(lat_start, lat_end):
         # look for file. If it doesn't exist, append NaN to the analysis file
         try:
             ncfile = Dataset('%s%s' % (directory_past,filename), 'r')
-            HDWpast.append(ncfile.variables['HDWANL'][:].data)
+            HDWpast.append(ncfile.variables['HDWI'][:].data)
             ncfile.close()
         except (OSError):
             HDWpast.append(np.full(shape=[len(latvar), len(lonvar)], fill_value=np.nan))
@@ -207,16 +207,16 @@ def plot_CONUS(lat_start, lat_end):
 def plot_AK(lat_start, lat_end):
     
     # Past 10 Days Data
-    directory_past = r'/home/hdw/HDW_data_AK/'
+    directory_past = r'/home/ubuntu/HDW_data_AK/'
     #directory_past = r'GEFS_fcst_AK/'
 
     # Climate Data for Climatology
-    directory_climo = r'/home/hdw/HDW_climo_AK/'
+    directory_climo = r'/home/ubuntu/HDW_climo_AK/'
     #directory_climo = r'climo_AK/'
     filename_climo = r'CFSR_MaxDHDW_CLIMO_AK.nc'
 
     # Location where figures will be saved
-    directory_fig = r'/home/hdw/HDW_ARCHplots_AK/'
+    directory_fig = r'/home/ubuntu/HDW_ARCHplots_AK/'
     #directory_fig = r'plots/'
  
 
@@ -241,7 +241,7 @@ def plot_AK(lat_start, lat_end):
         # look for file. If it doesn't exist, append NaN to the analysis file
         try:
             ncfile = Dataset('%s%s' % (directory_past,filename), 'r')
-            HDWpast.append(ncfile.variables['HDWANL'][:].data)
+            HDWpast.append(ncfile.variables['HDWI'][:].data)
             ncfile.close()
         except (OSError):
             HDWpast.append(np.full(shape=[len(latvar), len(lonvar)], fill_value=np.nan))

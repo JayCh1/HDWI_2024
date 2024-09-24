@@ -5,15 +5,15 @@ from netCDF4 import Dataset
 import datetime as dt
 
 # Climate Data for Climatology
-directory_climo = r'/home/hdw/HDW_climo/'
+directory_climo = r'/home/ubuntu/HDW_climo/'
 filename_climo = r'CFSR_MaxDHDW_CLIMO.nc'
 
 # Forecast Data
-directory_forecast = r'/home/hdw/HDW_data/'
+directory_forecast = r'/home/ubuntu/HDW_data/'
 filename_forecast = r'GEFS_HDW_FCST.nc'
 
 # Location where figures will be saved
-directory_save = r'/home/hdw/HDW_data/'
+directory_save = r'/home/ubuntu/HDW_data/'
 filename_ncfile = r'MaxHDWPercGrid.nc'
 
 # CLIMATOLOGY
@@ -27,7 +27,7 @@ ncfile.close()
 
 # FORECAST DATA
 ncfile_forecast = Dataset('%s%s' % (directory_forecast,filename_forecast), 'r')
-HDWfcst = ncfile_forecast.variables['HDWFCST'][0,:,:,:] #first day, mem, lat, lon
+HDWfcst = ncfile_forecast.variables['HDWI'][0,:,:,:] #first day, mem, lat, lon
 ncfile_forecast.close()
 
 def get_current_day():

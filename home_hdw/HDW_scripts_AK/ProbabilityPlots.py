@@ -100,15 +100,15 @@ mycmap = LinearSegmentedColormap.from_list('c', color_list, N=58)
     
 def plot_CONUS():
     # Climate Data for Climatology
-    directory_climo = r'/home/hdw/HDW_climo/'
+    directory_climo = r'/home/ubuntu/HDW_climo/'
     filename_climo = r'CFSR_MaxDHDW_CLIMO.nc'
 
     # Forecast Data
-    directory_forecast = r'/home/hdw/HDW_data/'
+    directory_forecast = r'/home/ubuntu/HDW_data/'
     filename_forecast = r'GEFS_HDW_FCST.nc'
 
     # Location where figures will be saved
-    directory_fig = r'/home/hdw/HDW_GEFSprobs/'
+    directory_fig = r'/home/ubuntu/HDW_GEFSprobs/'
 
     # CLIMATOLOGY
     ncfile = Dataset('%s%s' % (directory_climo,filename_climo), 'r')
@@ -121,7 +121,7 @@ def plot_CONUS():
 
     # FORECAST DATA
     ncfile_forecast = Dataset('%s%s' % (directory_forecast,filename_forecast), 'r')
-    HDWfcst = ncfile_forecast.variables['HDWFCST'][:] #days, mem, lat, lon
+    HDWfcst = ncfile_forecast.variables['HDWI'][:] #days, mem, lat, lon
     ncfile_forecast.close()
 
 
@@ -198,17 +198,17 @@ def plot_CONUS():
             
 def plot_AK():
     # Climate Data for Climatology
-    directory_climo = r'/home/hdw/HDW_climo_AK/'
+    directory_climo = r'/home/ubuntu/HDW_climo_AK/'
     #directory_climo = r'climo_AK/'
     filename_climo = r'CFSR_MaxDHDW_CLIMO_AK.nc'
 
     # Forecast Data
-    directory_forecast = r'/home/hdw/HDW_data_AK/'
+    directory_forecast = r'/home/ubuntu/HDW_data_AK/'
     #directory_forecast = r'GEFS_fcst_AK/'
     filename_forecast = r'GEFS_HDW_FCST_AK.nc'
 
     # Location where figures will be saved
-    directory_fig = r'/home/hdw/HDW_GEFSprobs_AK/'
+    directory_fig = r'/home/ubuntu/HDW_GEFSprobs_AK/'
 
     # CLIMATOLOGY
     ncfile = Dataset('%s%s' % (directory_climo,filename_climo), 'r')
@@ -221,7 +221,7 @@ def plot_AK():
 
     # FORECAST DATA
     ncfile_forecast = Dataset('%s%s' % (directory_forecast,filename_forecast), 'r')
-    HDWfcst = ncfile_forecast.variables['HDWFCST'][:] #days, mem, lat, lon
+    HDWfcst = ncfile_forecast.variables['HDWI'][:] #days, mem, lat, lon
     ncfile_forecast.close()
 
 

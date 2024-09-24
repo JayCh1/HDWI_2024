@@ -17,7 +17,7 @@ function clickbutton()
  	mod1 = document.f1.mod.options[document.f1.mod.selectedIndex].value ;
 	lat1 = document.f1.lat.options[document.f1.lat.selectedIndex].value ;
 	lon1 = document.f1.lon.options[document.f1.lon.selectedIndex].value ;
-	outvar = "images/"+ mod1 + "/" + mod1 + "_" + lat1 + "_" + lon1 + ".png";
+	outvar = mod1 + "plots/" + mod1 + "_" + lat1 + "_" + lon1 + ".png";
 	window.open(outvar) ;
  }
 </script>
@@ -50,8 +50,8 @@ function clickbutton()
 			</form>
 		</p>
     <hr>
-    <p><a href="images/ConusPerc.png">Today's CONUS HDW image</a></p>
-    <p><a href="images/AKPerc.png">Today's Alaska HDW image</a></p>
+    <p><a href="HDW_GEFSplots/ConusPerc.png">Today's CONUS HDW image</a></p>
+    <p><a href="HDW_GEFSplots_AK/AKPerc.png">Today's Alaska HDW image</a></p>
     <p><a href="https://hdwindex.fs2c.usda.gov">Full HDW Site</a></p>
 	</div>
   <div id="copyright">
@@ -62,7 +62,7 @@ function clickbutton()
 
 <script type="text/javascript">
   var myHDW = document.querySelector('hdwstatus');
-  fetch('images/hdwstatus.txt')
+  fetch('hdwstatus.txt')
   .then(function(response) { return response.text() })
   .then(function(text) {
     console.log(text);
